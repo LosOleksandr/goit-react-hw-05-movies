@@ -1,14 +1,27 @@
-import { fetchMovies } from "@api/movies";
-import { DailyTrendsResponse } from "@interfaces/api";
+import { Routes, Route } from "react-router-dom";
 
-fetchMovies<DailyTrendsResponse>(
-  "https://api.themoviedb.org/3/trending/all/day?language=en-US"
-)
-  .then((res) => console.log(res))
-  .catch((err) => console.log(err));
+import Home from "@pages/Home";
+import Movies from "@pages/Movies";
+import MovieDetails from "@pages/MovieDetails";
+import Cast from "@pages/Cast";
+import Reviews from "@pages/Reviews";
+import SharedLayout from "./SharedLayout/SharedLayout";
 
-function App() {
-  return <div>App</div>;
-}
+const App = () => {
+  return (
+    <main>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/movies/:movieId" element={<MovieDetails />}>
+            <Route path="credits" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
+        </Route>
+      </Routes>
+    </main>
+  );
+};
 
 export default App;

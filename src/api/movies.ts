@@ -15,5 +15,3 @@ export const fetchMovies = async <T>(url: string) => {
     console.error(error.message);
   }
 };
-
-

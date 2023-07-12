@@ -9,8 +9,10 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+      "@components": "/src/components",
       "@api": "/src/api",
       "@interfaces": "/src/interfaces",
+      "@pages": "/src/pages",
     },
   },
 });

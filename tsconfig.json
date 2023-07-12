@@ -9,7 +9,8 @@
     "paths": {
       "@components/*": ["./components/*"],
       "@api/*": ["./api/*"],
-      "@interfaces/*": ["./interfaces/*"]
+      "@interfaces/*": ["./interfaces/*"],
+      "@pages/*": ["./pages/*"]
     },
 
     /* Bundler mode */
