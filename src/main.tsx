@@ -4,13 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./components/App.tsx";
 import emotionReset from "emotion-reset";
 import { Global, css } from "@emotion/react";
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider,
-} from "react-query";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient();
 
