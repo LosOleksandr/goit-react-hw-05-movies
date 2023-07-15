@@ -29,18 +29,15 @@ export interface Movies {
   vote_count: number;
 }
 
-interface Details {
-  adult: boolean;
+export interface Details {
   backdrop_path: string | null;
   budget: number;
   genres: { id: number; name: string }[];
-  homepage: string;
   id: number;
-  imdb_id: string;
   original_language: string;
-  overview: string;
+  original_title: string;
   popularity: number;
-  poster_path: string | null;
+  poster_path: string;
   release_date: string;
   revenue: number;
   runtime: number;
@@ -51,7 +48,7 @@ interface Details {
   vote_count: number;
 }
 
-interface Credits {
+export interface Credits {
   adult: boolean;
   gender: number;
   id: number;
@@ -66,7 +63,7 @@ interface Credits {
   order: number;
 }
 
-interface Reviews {
+export interface Reviews {
   author: string | null;
   author_details: {
     name: string | null;
@@ -82,6 +79,6 @@ interface Reviews {
 }
 
 export type DailyTrendsResponse = MoviesResponse<Movies>;
-export type MoviesDetailsResponse = MoviesResponse<Details>;
+// export type MoviesDetailsResponse = MoviesResponse<Details>;
 export type MovieCreditsResponse = CreditsResponse<Credits>;
 export type MovieReviewsResponse = MoviesResponse<Reviews>;

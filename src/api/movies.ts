@@ -12,6 +12,6 @@ export const fetchMovies = async <T>(url: string) => {
     return response.data as T;
   } catch (err) {
     const error = err as AxiosError;
-    console.error(error.message);
+    throw new Error(error.message);
   }
 };

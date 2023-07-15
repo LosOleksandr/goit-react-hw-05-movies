@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import logo from "../../images/logo.svg";
+import { Suspense } from "react";
 import {
   Header,
   HeaderContainer,
@@ -7,6 +8,7 @@ import {
   StyledLink,
   Logo,
 } from "./SharedLayout.styled";
+import Loader from "@components/Loader/Loader";
 
 const SharedLayout = () => {
   return (
@@ -23,7 +25,9 @@ const SharedLayout = () => {
           </NavMenu>
         </HeaderContainer>
       </Header>
-      <Outlet />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };
