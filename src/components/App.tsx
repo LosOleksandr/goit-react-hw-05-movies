@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy } from "react";
-import Reviews from "@pages/Reviews";
 import SharedLayout from "./SharedLayout/SharedLayout";
 import NotFound from "@pages/NotFound";
 
@@ -8,6 +7,7 @@ const Home = lazy(() => import("@pages/Home/Home"));
 const Movies = lazy(() => import("@pages/Movies"));
 const MovieDetails = lazy(() => import("@pages/MovieDetails/MovieDetails"));
 const Cast = lazy(() => import("@pages/Cast"));
+const Reviews = lazy(() => import("@pages/Reviews"));
 
 const App = () => {
   return (
