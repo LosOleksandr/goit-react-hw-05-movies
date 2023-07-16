@@ -15,8 +15,9 @@ export const Item = styled.li`
   img {
     max-width: 100%;
     height: fit-content;
-    object-fit: cover;
     display: block;
+    height: 420px;
+    object-fit: cover;
   }
   div {
     position: relative;

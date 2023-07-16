@@ -1,5 +1,6 @@
 import { Details } from "@interfaces/api";
 import { List, Item } from "./MoviesCard.styled";
+import noImage from "../../images/mo-image.jpg";
 
 interface MovieCardProps {
   movie: Details;
@@ -17,8 +18,6 @@ const MoviesCard: React.FC<MovieCardProps> = ({ movie }) => {
   } = movie;
   const genreNames = genres.map((genre) => genre.name).join(", ");
 
-  
-
   return (
     <div
       style={{
@@ -28,7 +27,14 @@ const MoviesCard: React.FC<MovieCardProps> = ({ movie }) => {
         gap: "10rem",
       }}
     >
-      <img src={`https://image.tmdb.org/t/p/w400/${poster_path}`} alt="" />
+      <img
+        src={
+          poster_path
+            ? `https://image.tmdb.org/t/p/w400/${poster_path}`
+            : noImage
+        }
+        alt=""
+      />
       <div>
         <List>
           <Item>

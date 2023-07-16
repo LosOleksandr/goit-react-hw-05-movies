@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 
 const Cast = () => {
   const { movieId } = useParams();
+  
 
   const { data } = useQuery("data", () =>
     fetchMovies<MovieCreditsResponse>(

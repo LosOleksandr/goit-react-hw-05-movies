@@ -1,6 +1,7 @@
 import { Movies } from "@interfaces/api";
 import { List, Item, ItemLink, ItemText } from "./MoviesList.styled";
 import { useLocation } from "react-router-dom";
+import noImage from "../../images/mo-image.jpg";
 
 interface MoviesListProps {
   movies: Movies[] | undefined;
@@ -17,7 +18,11 @@ const MoviesList: React.FC<MoviesListProps> = ({ movies }) => {
             <ItemLink to={`/movies/${id}`} state={{ from: location }}>
               <div>
                 <img
-                  src={`https://image.tmdb.org/t/p/w400/${poster_path}`}
+                  src={
+                    poster_path
+                      ? `https://image.tmdb.org/t/p/w400/${poster_path}`
+                      : noImage
+                  }
                   alt={title || name}
                 />
               </div>

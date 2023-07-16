@@ -7,4 +7,7 @@ export const Item = styled.li`
   :not(:last-child) {
     margin-bottom: 2rem;
   }
+  
+  img {
+  }
 `;

@@ -3,9 +3,9 @@ import { lazy } from "react";
 import SharedLayout from "./SharedLayout/SharedLayout";
 import NotFound from "@pages/NotFound";
 
-const Home = lazy(() => import("@pages/Home/Home"));
+const Home = lazy(() => import("@pages/Home"));
 const Movies = lazy(() => import("@pages/Movies"));
-const MovieDetails = lazy(() => import("@pages/MovieDetails/MovieDetails"));
+const MovieDetails = lazy(() => import("@pages/MovieDetails"));
 const Cast = lazy(() => import("@pages/Cast"));
 const Reviews = lazy(() => import("@pages/Reviews"));
 

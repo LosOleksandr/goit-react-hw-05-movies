@@ -3,8 +3,9 @@ import MoviesCard from "@components/MovieCard/MoviesCard";
 import { Details } from "@interfaces/api";
 import { useQuery } from "react-query";
 import { NavLink, Outlet, useLocation, useParams } from "react-router-dom";
-import { Container, Section, Title } from "./MoviesDetails.styled";
-import { useRef } from "react";
+import { Section, Container, Title } from "@components/Styled/Common";
+import { useRef, Suspense } from "react";
+import Loader from "@components/Loader/Loader";
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -34,6 +35,7 @@ const MovieDetails = () => {
           </NavLink>
           <NavLink to="reviews">Reviews</NavLink>
         </div>
+        <Suspense fallback={<Loader />} />
         <Outlet />
       </Container>
     </Section>
